@@ -13,7 +13,7 @@ const GameCard = ({ game }: Props) => {
     <Card.Root>
       <Image
         src={getCroppedImageUrl(game.background_image)}
-        alt="Green double couch with wooden legs"
+        alt="Game background image"
       />
       <Card.Body>
         <Heading fontSize="2xl">{game.name}</Heading>
