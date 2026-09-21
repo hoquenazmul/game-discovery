@@ -1,5 +1,5 @@
 import usePlatforms, { type Platform } from "@/hooks/usePlatforms";
-import { Button, Icon, Menu, Portal, Spinner } from "@chakra-ui/react";
+import { Button, Icon, Menu, Portal } from "@chakra-ui/react";
 import { BsChevronDown } from "react-icons/bs";
 
 interface Props {
@@ -8,10 +8,7 @@ interface Props {
 }
 
 const PlatformSelector = ({ selectedPlatform, onSelectPlatform }: Props) => {
-  const { data, error, isLoading } = usePlatforms();
-
-  if (isLoading) return <Spinner />;
-  if (error) return null;
+  const { data } = usePlatforms();
 
   return (
     <Menu.Root>
